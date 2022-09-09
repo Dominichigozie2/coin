@@ -94,8 +94,8 @@ nav{
 
 .top{
  display: flex;
- position: absolute;
- top: 4rem;
+ position: sticky;
+ top: 0;
  width: 100%;
  background: #000;
  z-index: 900;
@@ -232,9 +232,6 @@ nav{
     background: var(--dsg);
     font-weight: bold;
 }
-.content{
-   text-align: center;
-}
 .content>h1{
     font-size: 5rem;
     margin: 2rem 0;
@@ -322,7 +319,7 @@ background: var(--dsg);
     width: 40rem;
     height: 50vh;
     position: relative;
-    padding: 1rem;
+    padding: .1rem;
     justify-content: center;
 
 }
@@ -723,11 +720,11 @@ place-content: center;
     width: 90%;
     max-width: 800px;
     margin: 15rem auto;
-    height: 900px;
+    height: 1000px;
 }
 .client-title{
   font-size: 4rem;
-  padding: 4rem;
+  padding: 2rem .5rem;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -739,7 +736,7 @@ place-content: center;
     /* background: var(--dsg); */
     width: 100%;
     /* z-index: -1; */
-    min-height: 450px;
+    min-height: 650px;
     color: var(--clr);
     border-radius: 5px;
     position: relative;
@@ -1008,9 +1005,51 @@ color: rgb(95, 93, 93);
     .tabs-container{
         gap: 1rem;
     }
+    .info{
+        padding: .5rem;
+    }
+    .info-content{
+        width: 100%;
+        padding: .5rem;
+    }
+    .info-content p{
+        padding: .3rem;
+    }
+    .calculator-title{
+        font-size: 1.6rem;
+    }
+    .calculator p{
+        font-size: .7rem;
+    }
+    .cal-container{
+        padding: .5rem;
+    }
+    .cal-content input,
+    .sign i
+    {
+        padding: .5rem;
+        font-size: .9rem;
+        height: 3rem;
+    }
+    .result-content p{
+        padding: .9rem;
+        width: 10rem;
+    }
+    .start-title{
+        font-size: 2rem;
+    }
 }
 
 @media(max-width:900px){
+    .container{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+    }
     .bar{
         display: block;
     }
@@ -1046,6 +1085,13 @@ color: rgb(95, 93, 93);
 }
 .about-photo img{
     max-width: 20rem;
+}
+.package-heading{
+    font-size: 1.2rem;
+}
+.tabs-container{
+    transform: translateY(-120%);
+    padding: 5px;
 }
 }
 
